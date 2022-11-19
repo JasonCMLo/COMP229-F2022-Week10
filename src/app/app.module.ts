@@ -10,6 +10,10 @@ import { AboutComponent } from './content/about/about.component';
 import { ServicesComponent } from './content/services/services.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ContactComponent } from './content/contact/contact.component';
+import { LoginComponent } from './content/auth/login/login.component';
+import { RegisterComponent } from './content/auth/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,12 @@ import { ContactComponent } from './content/contact/contact.component';
     AboutComponent,
     ServicesComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
